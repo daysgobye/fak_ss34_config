@@ -43,6 +43,7 @@ Versions listed above are from the Nix flake, representative of my dev environme
 If you use Nix, you can simply use the provided flake.
 
 1. Clone this repo
+1. use nix `nix develop  --experimental-features 'nix-command flakes' --command bash`
 1. Edit `ncl/keyboard.ncl` and `ncl/keymap.ncl`
 1. `python fak.py flash`
 1. `python fak.py flash_p` for the peripheral side if you have a split
