@@ -2,6 +2,7 @@ let { tap, hold,macro, .. } = import "../../fak/keycode.ncl" in
 let kc = tap.reg.kc in
 let tm = tap.reg.mod in
 let md = hold.reg.mod in
+let mt= macro.tap in
 let macro_send_string = fun str =>
   let steps =
     std.string.uppercase str
@@ -11,21 +12,15 @@ let macro_send_string = fun str =>
   macro.make steps
 in
 
-
 {
 const=macro_send_string "const  ",
-consolelog_bk=macro_send_string "console.log() ",
 arrowfunc=macro_send_string "=()=>{} ",
 _true=macro_send_string "true ",
 _false=macro_send_string "false ",
-deleteword=macro.make [
-    macro.press md.lctl
-    macro.tap kc.BSPC,
-    macro.release md.lctl
-],
+deleteword=kc.BSPC & tap.reg.mod.lctl
 
 
-gitcommit_m=macro.make [
+gitcommit_m = macro.make [
     macro.tap kc.G,
     macro.tap kc.I,
     macro.tap kc.T,
