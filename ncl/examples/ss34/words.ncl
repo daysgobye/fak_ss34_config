@@ -35,8 +35,8 @@ consolelog=macro.make [
   macro.tap kc.L,
   macro.tap kc.O,
   macro.tap kc.G,
-  macro.tap kc.LPRN,
-  macro.tap kc.RPRN,
+  macro.tap ks.LPRN,
+  macro.tap ks.RPRN,
   macro.tap kc.LEFT
 
 ],

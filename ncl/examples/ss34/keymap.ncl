@@ -84,14 +84,15 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
     combo.make 50 [1,2], # esc
     combo.make 50 [6,7], # bkspace
     combo.make 50 [16,17], # :
-    combo.make 7 [2,3], # tab
+    combo.make 15 [2,3], # tab
     combo.make 60 [15,32], # ctrl left
     combo.make 60 [18,32], # ctrl right
     combo.make 60 [6,7,32], # delete word
+    combo.make 60 [30,31], # lower layer 
 
-    combo.make 15 [4,15], # thank you.
+    combo.make 30 [4,15], # thank you.
     combo.make 60 [10,18,32], # aluminum.
-    combo.make 60 [10,15], # haha 
+    combo.make 30 [10,15], # haha 
     combo.make 60 [17,24,32], # keyboard  
     combo.make 60 [4,10,32], # that   
     combo.make 60 [5,10,32], # yeah 
@@ -106,7 +107,9 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
     combo.make 60 [13,26,32], # my favorite  
     combo.make 60 [10,14,32], # git fetch && git pull 
     combo.make 60 [8,9,32], # opensource 
-    combo.make 60 [1,10,32] # awesome 
+    combo.make 60 [1,10,32], # awesome 
+    combo.make 60 [22,25,32], # const 
+    combo.make 60 [22,18], # console.log 
 
   ],
 
@@ -115,8 +118,8 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
     LALTQ,   kc.W,   kc.E,    kc.R,    kc.T,      kc.Y,    kc.U,    kc.I,    kc.O,     LALTP,
     LGUIA,   kc.S,   kc.D,    kc.F,    kc.G,      kc.H,    kc.J,    kc.K,    kc.L,     LGUISC,
     LSFTZ,   kc.X,   kc.C,    kc.V,    kc.B,      kc.N,    kc.M,    kc.COMM,  kc.DOT,   LSFTSL,
-                            CTRLLOWER, RAISE_ENT,   XXXX,  LOWER_SPC,
-                            kc.ESC,kc.BSPC,ks.COLN, kc.TAB,XXXX,XXXX,words.deleteword,
+                            tap.reg.mod.lctl, RAISE_ENT,   XXXX,  LOWER_SPC,
+                            kc.ESC,kc.BSPC,ks.COLN, kc.TAB,XXXX,XXXX,words.deleteword,hold.reg.layer 2,
                             words.thankyou,
                             words.aluminum,
                             words.haha,
@@ -134,16 +137,18 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
                             words.myfavorite,
                             words.gitfetchandpull,
                             words.opensource,
-                            words.awesome
+                            words.awesome,
+                            words.const,
+                            words.consolelog
 
 
     ],
     [
     kc.N1,kc.N2,kc.N3,kc.N4,kc.N5,kc.N6,kc.N7,kc.N8,kc.N9,kc.N0,
     kc.N6,kc.N7,kc.N8,kc.N9,kc.N0,kc.LEFT,kc.DOWN,kc.UP,kc.RIGHT,kc.QUOTE,
-   TTTT,kc.GRAVE,TTTT,TTTT,TTTT,kc.MINUS,kc.EQUAL,kc.LEFT_BRACKET,kc.RIGHT_BRACKET,kc.SLASH,
+   TTTT,kc.GRAVE,TTTT,TTTT,tap.custom.fak.BOOT,kc.MINUS,kc.EQUAL,kc.LEFT_BRACKET,kc.RIGHT_BRACKET,kc.SLASH,
                  TTTT, TTTT,   TTTT,  TTTT,
-                 XXXX, words.deleteword,XXXX,XXXX,ctrlLEFT,ctrlRIGHT,XXXX,
+                 XXXX, words.deleteword,XXXX,XXXX,ctrlLEFT,ctrlRIGHT,XXXX,XXXX,
                  
                  XXXX,
                  XXXX,
@@ -162,14 +167,16 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
                  XXXX,
                  XXXX,
                  XXXX,
-                 XXXX
+                 XXXX,
+                  XXXX,
+                   XXXX
     ], 
     [
      ks.EXLM, ks.AT,    ks.HASH,  ks.DLR ,  ks.PERC,  ks.CIRC,  ks.AMPR,  ks.ASTR,  ks.LPRN , ks.RPRN ,
      TTTT, TTTT,  TTTT,  TTTT,  TTTT,  kc.LEFT,  kc.DOWN,  kc.UP,    kc.RIGHT, ks.DQUO,
      TTTT, ks.TILD, TTTT,  TTTT,  TTTT,  ks.UNDS , ks.PLUS,  ks.LCBR,  ks.RCBR , ks.PIPE,
                                   TTTT, TTTT,   TTTT,  TTTT,
-                  XXXX, words.deleteword,XXXX,XXXX,ctrlLEFT,ctrlRIGHT,XXXX,
+                  XXXX, words.deleteword,XXXX,XXXX,ctrlLEFT,ctrlRIGHT,XXXX,XXXX,
                  XXXX,
                  XXXX,
                  XXXX,
@@ -187,7 +194,9 @@ let ctrlRIGHT= kc.RIGHT & tap.reg.mod.lctl in
                  XXXX,
                  XXXX,
                  XXXX,
-                 XXXX
+                 XXXX,
+                  XXXX,
+                   XXXX
   ]
   ]
 }
